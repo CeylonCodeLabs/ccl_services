@@ -1,3 +1,2 @@
-- chore(Release): v0.3.3 (Pasan Randula Eramusugoda)
-- fix(Localization): Dependency init error (Pasan Randula Eramusugoda)
+- chore(Release): v0.3.4 (Pasan Randula Eramusugoda)
 - docs(Release): Updates (Pasan Randula Eramusugoda)
