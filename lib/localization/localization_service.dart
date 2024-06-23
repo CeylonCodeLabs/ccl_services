@@ -9,8 +9,7 @@ class LocalizationService
   static const String TAG = 'LocalizationService';
 
   /// The secure storage service used to persist the locale.
-  final SecureStorageService _secureStorageService =
-      StackedLocator.instance.get();
+  final SecureStorageService _secureStorageService = GetIt.instance.get();
 
   /// The fallback locale to use if no locale is saved in secure storage.
   final Locale? _fallbackLocale;
@@ -34,6 +33,8 @@ class LocalizationService
   /// Initializes the service by loading the locale from secure storage.
   @override
   Future<void> init() async {
+    await _setupLocator();
+
     final locale = await _getLocale();
     _locale = ReactiveValue(locale);
   }
@@ -68,5 +69,12 @@ class LocalizationService
     }
 
     return Locale(Intl.getCurrentLocale());
+  }
+
+  Future<void> _setupLocator() async {
+    final ss = SecureStorageService();
+    await ss.init();
+
+    GetIt.instance.registerSingleton(ss);
   }
 }
