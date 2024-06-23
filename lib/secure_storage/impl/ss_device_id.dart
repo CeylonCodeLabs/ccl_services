@@ -1,6 +1,7 @@
 part of '../../ccl_services.dart';
 
 /// A helper class for accessing the device ID in secure storage.
+@Deprecated('For static data types use SSObject')
 class SSDeviceId extends SecureStorageHelper<String> {
   /// Creates a new [SSDeviceId] instance.
   SSDeviceId(super.instance);

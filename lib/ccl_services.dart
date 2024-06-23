@@ -1,6 +1,8 @@
 library ccl_services;
 
 
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_support_pack/flutter_support_pack.dart';
@@ -19,5 +21,7 @@ part 'secure_storage/secure_storage_service.dart';
 part 'secure_storage/impl/ss_device_id.dart';
 
 part 'secure_storage/impl/ss_locale.dart';
+
+part 'secure_storage/impl/ss_object.dart';
 
 part 'localization/localization_service.dart';

@@ -8,10 +8,10 @@ class SecureStorageService extends SecureStorageInstance
   static const TAG = 'SecureStorageService';
 
   /// Accessor for device ID in secure storage.
-  late final SSDeviceId deviceId;
+  late final SSObject<String> deviceId;
 
   /// Accessor for locale in secure storage.
-  late final SSLocale locale;
+  late final SSObject<String> locale;
 
   /// Returns the underlying [FlutterSecureStorage] instance.
   @override
@@ -20,8 +20,8 @@ class SecureStorageService extends SecureStorageInstance
   /// Initializes the service by creating accessors for device ID and locale.
   @override
   Future<void> init() async {
-    deviceId = SSDeviceId(instance);
-    locale = SSLocale(instance);
+    deviceId = SSObject('device_id', instance);
+    locale = SSObject('locale', instance);
   }
 
   /// Logs the user out by clearing all data from secure storage except the device ID.
