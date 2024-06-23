@@ -1,3 +1,0 @@
-- chore(Release - Service): v0.2.5 (Pasan)
-- refactor(Service - Localization): Add factory params to service (Pasan)
-- docs(Change Log): Updates (Pasan)
