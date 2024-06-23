@@ -1,6 +1,7 @@
 part of '../../ccl_services.dart';
 
 /// A helper class for accessing the locale in secure storage.
+@Deprecated('For static data types use SSObject')
 class SSLocale extends SecureStorageHelper<String> {
   /// Creates a new [SSLocale] instance.
   SSLocale(super.instance);
