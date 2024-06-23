@@ -9,7 +9,7 @@ class LocalizationService
   static const String TAG = 'LocalizationService';
 
   /// The secure storage service used to persist the locale.
-  final _secureStorageService = GetIt.instance<SecureStorageService>();
+  late final SecureStorageService _secureStorageService;
 
   /// The fallback locale to use if no locale is saved in secure storage.
   final Locale? _fallbackLocale;
@@ -75,6 +75,6 @@ class LocalizationService
     final ss = SecureStorageService();
     await ss.init();
 
-    GetIt.instance.registerLazySingleton(() => ss);
+    _secureStorageService = GetIt.instance.registerSingleton(ss);
   }
 }
