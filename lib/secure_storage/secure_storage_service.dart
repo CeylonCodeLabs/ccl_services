@@ -2,7 +2,7 @@ part of '../ccl_services.dart';
 
 /// A service that provides access to secure storage.
 class SecureStorageService extends SecureStorageInstance
-    implements InitializableDependency {
+    implements ISecureStorageService {
   /// Logging tag for this service.
   // ignore: constant_identifier_names
   static const TAG = 'SecureStorageService';
@@ -25,6 +25,7 @@ class SecureStorageService extends SecureStorageInstance
   }
 
   /// Logs the user out by clearing all data from secure storage except the device ID.
+  @override
   Future<void> logout() async {
     final deviceId = await this.deviceId.read();
     await clearAll();
@@ -32,5 +33,6 @@ class SecureStorageService extends SecureStorageInstance
   }
 
   /// Clears all data from secure storage.
+  @override
   Future<void> clearAll() => instance.deleteAll();
 }

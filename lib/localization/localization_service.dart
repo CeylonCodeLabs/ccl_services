@@ -3,13 +3,13 @@ part of '../ccl_services.dart';
 /// A service that manages the application's locale.
 class LocalizationService
     with ListenableServiceMixin
-    implements InitializableDependency {
+    implements ILocalizationService {
   /// Logging tag for this service.
   // ignore: constant_identifier_names
   static const String TAG = 'LocalizationService';
 
   /// The secure storage service used to persist the locale.
-  late final SecureStorageService _secureStorageService;
+  final SecureStorageService _secureStorageService = StackedLocator.instance.get();
 
   /// The fallback locale to use if no locale is saved in secure storage.
   final Locale? _fallbackLocale;
@@ -33,19 +33,20 @@ class LocalizationService
   /// Initializes the service by loading the locale from secure storage.
   @override
   Future<void> init() async {
-    await _setupLocator();
-
     final locale = await _getLocale();
     _locale = ReactiveValue(locale);
   }
 
   /// The current locale.
+  @override
   Locale get locale => _locale.value;
 
   /// A stream of locale changes.
+  @override
   Stream<Locale> get localeChanges => _locale.values;
 
   /// Updates the current locale and persists it to secure storage.
+  @override
   Future<void> setLocale(Locale locale) async {
     await _secureStorageService.locale.set(locale.languageCode);
     _locale.value = locale;
@@ -69,12 +70,5 @@ class LocalizationService
     }
 
     return Locale(Intl.getCurrentLocale());
-  }
-
-  Future<void> _setupLocator() async {
-    final ss = SecureStorageService();
-    await ss.init();
-
-    _secureStorageService = GetIt.instance.registerSingleton(ss);
   }
 }

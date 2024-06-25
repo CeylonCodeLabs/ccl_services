@@ -1,0 +1,17 @@
+part of '../ccl_services.dart';
+
+/// A service that provides access to secure storage.
+abstract class ISecureStorageService implements InitializableDependency {
+  /// Returns the underlying [FlutterSecureStorage] instance.
+  FlutterSecureStorage get instance;
+
+  /// Initializes the service by creating accessors for device ID and locale.
+  @override
+  Future<void> init();
+
+  /// Logs the user out by clearing all data from secure storage except the device ID.
+  Future<void> logout();
+
+  /// Clears all data from secure storage.
+  Future<void> clearAll();
+}
