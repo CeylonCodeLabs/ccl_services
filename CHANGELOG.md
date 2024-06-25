@@ -1,4 +1,20 @@
 
+<a name="v0.3.6"></a>
+## [v0.3.6](https://github.com/CeylonCodeLabs/ccl_packages/compare/v0.3.5...v0.3.6) (2024-06-25)
+
+### Chore
+
+* **Release:** v0.3.6
+
+### Docs
+
+* **Release:** Updates
+
+### Refactor
+
+* **Services:** Initialization and dependency method updates
+
+
 <a name="v0.3.5"></a>
 ## [v0.3.5](https://github.com/CeylonCodeLabs/ccl_packages/compare/v0.3.4...v0.3.5) (2024-06-24)
 
