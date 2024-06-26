@@ -8,33 +8,32 @@ class LocalizationService
   // ignore: constant_identifier_names
   static const String TAG = 'LocalizationService';
 
+  final String _prefKey = 'ccl_locale';
+
   /// The secure storage service used to persist the locale.
-  final SecureStorageService _secureStorageService = StackedLocator.instance.get();
-
-  /// The fallback locale to use if no locale is saved in secure storage.
-  final Locale? _fallbackLocale;
-
-  /// The list of supported locales.
-  final List<Locale>? _supportedLocales;
+  late final SharedPreferences _pref;
 
   /// The current locale.
   late final ReactiveValue<Locale> _locale;
 
-  /// Creates a new `LocalizationService`.
-  ///
-  /// The [fallbackLocale] is used if no locale is saved in secure storage.
-  /// The [supportedLocales] is a list of locales that the app supports.
-  LocalizationService({
-    @factoryParam Locale? fallbackLocale,
-    @factoryParam List<Locale>? supportedLocales,
-  })  : _fallbackLocale = fallbackLocale,
-        _supportedLocales = supportedLocales;
+  /// The fallback locale to use if no locale is saved in secure storage.
+  Locale? _fallbackLocale;
+
+  /// The list of supported locales.
+  List<Locale>? _supportedLocales;
 
   /// Initializes the service by loading the locale from secure storage.
   @override
   Future<void> init() async {
+    _pref = await SharedPreferences.getInstance();
     final locale = await _getLocale();
     _locale = ReactiveValue(locale);
+  }
+
+  @override
+  void config({Locale? fallbackLocale, List<Locale>? supportedLocales}) {
+    _fallbackLocale = fallbackLocale;
+    _supportedLocales = supportedLocales;
   }
 
   /// The current locale.
@@ -48,21 +47,21 @@ class LocalizationService
   /// Updates the current locale and persists it to secure storage.
   @override
   Future<void> setLocale(Locale locale) async {
-    await _secureStorageService.locale.set(locale.languageCode);
+    await _pref.setString(_prefKey, locale.languageCode);
     _locale.value = locale;
     notifyListeners();
   }
 
   /// Gets the locale from secure storage or returns a fallback locale.
   Future<Locale> _getLocale() async {
-    final savedLocale = await _secureStorageService.locale.read();
+    final savedLocale = _pref.getString(_prefKey);
 
     if (savedLocale.isNotNullOrEmpty) {
       return Locale(savedLocale!);
     }
 
     if (_fallbackLocale != null) {
-      return _fallbackLocale;
+      return _fallbackLocale!;
     }
 
     if (_supportedLocales.isListNotEmptyOrNull) {

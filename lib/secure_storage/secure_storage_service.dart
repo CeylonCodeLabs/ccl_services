@@ -10,9 +10,6 @@ class SecureStorageService extends SecureStorageInstance
   /// Accessor for device ID in secure storage.
   late final SSObject<String> deviceId;
 
-  /// Accessor for locale in secure storage.
-  late final SSObject<String> locale;
-
   /// Returns the underlying [FlutterSecureStorage] instance.
   @override
   FlutterSecureStorage get instance => defaultInstance;
@@ -21,7 +18,6 @@ class SecureStorageService extends SecureStorageInstance
   @override
   Future<void> init() async {
     deviceId = SSObject('device_id', instance);
-    locale = SSObject('locale', instance);
   }
 
   /// Logs the user out by clearing all data from secure storage except the device ID.
