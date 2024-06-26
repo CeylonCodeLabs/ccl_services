@@ -16,4 +16,6 @@ abstract class ILocalizationService implements InitializableDependency {
 
   /// Updates the current locale and persists it to secure storage.
   Future<void> setLocale(Locale locale);
+
+  bool get isSaved;
 }

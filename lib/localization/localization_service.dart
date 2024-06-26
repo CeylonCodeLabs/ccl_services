@@ -52,6 +52,9 @@ class LocalizationService
     notifyListeners();
   }
 
+  @override
+  bool get isSaved => _pref.containsKey(_prefKey);
+
   /// Gets the locale from secure storage or returns a fallback locale.
   Future<Locale> _getLocale() async {
     final savedLocale = _pref.getString(_prefKey);
