@@ -1,4 +1,20 @@
 
+<a name="v0.3.8"></a>
+## [v0.3.8](https://github.com/CeylonCodeLabs/ccl_packages/compare/v0.3.7...v0.3.8) (2024-06-26)
+
+### Chore
+
+* **Release:** v0.3.8
+
+### Docs
+
+* **Release:** Updates
+
+### Feat
+
+* **Localization:** Method to check if locale is saved
+
+
 <a name="v0.3.7"></a>
 ## [v0.3.7](https://github.com/CeylonCodeLabs/ccl_packages/compare/v0.3.6...v0.3.7) (2024-06-26)
 
