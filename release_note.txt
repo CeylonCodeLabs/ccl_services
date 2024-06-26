@@ -1,3 +1,6 @@
+- chore(Release): v0.3.7 (Pasan Randula Eramusugoda)
+- refactor(Localization): Implementation updates (Pasan Randula Eramusugoda)
+- docs(Release): Updates (Pasan Randula Eramusugoda)
 - chore(Release): v0.3.6 (Pasan Randula Eramusugoda)
 - refactor(Services): Initialization and dependency method updates (Pasan Randula Eramusugoda)
 - docs(Release): Updates (Pasan Randula Eramusugoda)
