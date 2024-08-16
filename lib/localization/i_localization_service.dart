@@ -1,4 +1,4 @@
-part of '../ccl_services.dart';
+part of '../services.dart';
 
 /// A service that manages the application's locale.
 abstract class ILocalizationService implements InitializableDependency {

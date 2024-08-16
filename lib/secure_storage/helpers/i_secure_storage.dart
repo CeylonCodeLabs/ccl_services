@@ -1,4 +1,4 @@
-part of '../../ccl_services.dart';
+part of '../../services.dart';
 
 /// An interface for accessing typed values in secure storage.
 abstract class ISecureStorage<T> {

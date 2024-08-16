@@ -1,4 +1,4 @@
-part of '../../ccl_services.dart';
+part of '../../services.dart';
 
 /// A helper class for accessing typed values in secure storage.
 abstract class SecureStorageHelper<T> implements ISecureStorage<T> {

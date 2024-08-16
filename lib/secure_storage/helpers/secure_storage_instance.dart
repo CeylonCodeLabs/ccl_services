@@ -1,4 +1,4 @@
-part of '../../ccl_services.dart';
+part of '../../services.dart';
 
 /// An abstract class that provides a base for secure storage implementations.
 abstract class SecureStorageInstance {
