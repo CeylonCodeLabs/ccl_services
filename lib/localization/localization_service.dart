@@ -1,4 +1,12 @@
-part of '../services.dart';
+import 'dart:ui';
+
+import 'package:flutter_support_pack/flutter_support_pack.dart';
+import 'package:intl/intl.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:stacked/stacked.dart';
+import 'package:stacked/stacked_annotations.dart';
+
+part 'i_localization_service.dart';
 
 /// A service that manages the application's locale.
 class LocalizationService

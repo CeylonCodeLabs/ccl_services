@@ -1,4 +1,4 @@
-part of '../../services.dart';
+part of '../secure_storage_service.dart';
 
 /// A class that extends `SecureStorageHelper` and provides functionality for storing and retrieving objects of a generic type `T` in secure storage.
 ///

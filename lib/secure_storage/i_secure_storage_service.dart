@@ -1,4 +1,4 @@
-part of '../services.dart';
+part of 'secure_storage_service.dart';
 
 /// A service that provides access to secure storage.
 abstract class ISecureStorageService implements InitializableDependency {

@@ -1,4 +1,4 @@
-part of '../services.dart';
+part of 'localization_service.dart';
 
 /// A service that manages the application's locale.
 abstract class ILocalizationService implements InitializableDependency {

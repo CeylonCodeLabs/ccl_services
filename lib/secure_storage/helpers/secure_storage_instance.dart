@@ -1,4 +1,4 @@
-part of '../../services.dart';
+part of '../secure_storage_service.dart';
 
 /// An abstract class that provides a base for secure storage implementations.
 abstract class SecureStorageInstance {
@@ -8,7 +8,7 @@ abstract class SecureStorageInstance {
     aOptions: AndroidOptions(
       encryptedSharedPreferences: true,
       keyCipherAlgorithm:
-      KeyCipherAlgorithm.RSA_ECB_OAEPwithSHA_256andMGF1Padding,
+          KeyCipherAlgorithm.RSA_ECB_OAEPwithSHA_256andMGF1Padding,
       storageCipherAlgorithm: StorageCipherAlgorithm.AES_GCM_NoPadding,
     ),
   );
