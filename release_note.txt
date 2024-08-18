@@ -1,3 +1,3 @@
-- chore(Release): v0.4.0 (Pasan Eramusugoda)
-- refactor(Code): Optimizations (Pasan)
-- docs(Release): Updates (Pasan Randula Eramusugoda)
+- chore(Release): v0.4.1 (Pasan Eramusugoda)
+- refactor(Code): Arrangement optimization (Pasan Eramusugoda)
+- docs(Release): Updates (Pasan Eramusugoda)
