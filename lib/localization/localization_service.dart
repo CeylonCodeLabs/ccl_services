@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:flutter_support_pack/flutter_support_pack.dart';
+import 'package:ccl_core/ccl_core.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:stacked/stacked.dart';
@@ -67,7 +67,7 @@ class LocalizationService
   Future<Locale> _getLocale() async {
     final savedLocale = _pref.getString(_prefKey);
 
-    if (savedLocale.isNotNullOrEmpty) {
+    if (savedLocale.isNotNullAndNotEmpty) {
       return Locale(savedLocale!);
     }
 
@@ -75,7 +75,7 @@ class LocalizationService
       return _fallbackLocale!;
     }
 
-    if (_supportedLocales.isListNotEmptyOrNull) {
+    if (_supportedLocales.isNotNullAndNotEmpty) {
       return _supportedLocales!.first;
     }
 

@@ -1,15 +1,15 @@
 import 'dart:convert';
 
+import 'package:ccl_core/ccl_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:flutter_support_pack/flutter_support_pack.dart';
 import 'package:stacked/stacked_annotations.dart';
 
+part 'helpers/i_secure_storage.dart';
+part 'helpers/secure_storage_helper.dart';
+part 'helpers/secure_storage_instance.dart';
 part 'i_secure_storage_service.dart';
 part 'impl/ss_object.dart';
-part 'helpers/i_secure_storage.dart';
-part 'helpers/secure_storage_instance.dart';
-part 'helpers/secure_storage_helper.dart';
 
 /// A service that provides access to secure storage.
 class SecureStorageService extends SecureStorageInstance

@@ -34,7 +34,7 @@ abstract class SecureStorageHelper<T> implements ISecureStorage<T> {
   /// Returns null if the value is not found or cannot be converted.
   Future<T?> read() async {
     final args = await _instance.read(key: key);
-    if (args.isNotNullOrEmpty) {
+    if (args.isNotNullAndNotEmpty) {
       return stringToValue(args!);
     }
     return null;
