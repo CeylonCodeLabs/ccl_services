@@ -1,4 +1,20 @@
 
+<a name="v0.6.1"></a>
+## [v0.6.1](https://github.com/CeylonCodeLabs/ccl_packages/compare/v0.6.0...v0.6.1) (2024-09-06)
+
+### Chore
+
+* **Release:** v0.6.1
+
+### Docs
+
+* **Release:** Updates
+
+### Refactor
+
+* **Secure Storage Service:** Make SecureStorageHelper visible
+
+
 <a name="v0.6.0"></a>
 ## [v0.6.0](https://github.com/CeylonCodeLabs/ccl_packages/compare/v0.5.0...v0.6.0) (2024-09-05)
 

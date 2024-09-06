@@ -1,3 +1,3 @@
-- chore(Release): v0.6.0 (Pasan Eramusugoda)
-- refactor(Code): Package updates and code restructure (Pasan Eramusugoda)
+- chore(Release): v0.6.1 (Pasan Eramusugoda)
+- refactor(Secure Storage Service): Make SecureStorageHelper visible (Pasan Eramusugoda)
 - docs(Release): Updates (Pasan Eramusugoda)
