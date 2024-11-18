@@ -1,4 +1,24 @@
 
+<a name="v0.7.0"></a>
+## [v0.7.0](https://github.com/CeylonCodeLabs/ccl_packages/compare/v0.6.1...v0.7.0) (2024-11-19)
+
+### Chore
+
+* **Release:** v0.7.0
+
+### Docs
+
+* **Release:** Updates
+
+### Feat
+
+* **Event Relay:** Event relay service added
+
+### Refactor
+
+* **Code:** Package updates
+
+
 <a name="v0.6.1"></a>
 ## [v0.6.1](https://github.com/CeylonCodeLabs/ccl_packages/compare/v0.6.0...v0.6.1) (2024-09-06)
 

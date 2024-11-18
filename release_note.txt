@@ -1,3 +1,4 @@
-- chore(Release): v0.6.1 (Pasan Eramusugoda)
-- refactor(Secure Storage Service): Make SecureStorageHelper visible (Pasan Eramusugoda)
+- chore(Release): v0.7.0 (Pasan Eramusugoda)
+- refactor(Code): Package updates (Pasan Eramusugoda)
+- feat(Event Relay): Event relay service added (Pasan Eramusugoda)
 - docs(Release): Updates (Pasan Eramusugoda)
