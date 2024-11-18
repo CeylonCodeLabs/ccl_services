@@ -1,4 +1,20 @@
 
+<a name="v0.7.1"></a>
+## [v0.7.1](https://github.com/CeylonCodeLabs/ccl_packages/compare/v0.7.0...v0.7.1) (2024-11-19)
+
+### Chore
+
+* **Release:** v0.7.1
+
+### Docs
+
+* **Release:** Updates
+
+### Fix
+
+* **Event Relay:** Cancel response subscription when timeout reached
+
+
 <a name="v0.7.0"></a>
 ## [v0.7.0](https://github.com/CeylonCodeLabs/ccl_packages/compare/v0.6.1...v0.7.0) (2024-11-19)
 
