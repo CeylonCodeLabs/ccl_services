@@ -1,3 +1,5 @@
+export 'event_relay/event_relay_service.dart'
+    show EventRelayService;
 export 'notification/notification_service.dart'
     show NotificationService;
 export 'secure_storage/secure_storage_service.dart'

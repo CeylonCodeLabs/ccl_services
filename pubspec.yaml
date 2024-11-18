@@ -16,7 +16,8 @@ dependencies:
   flutter_secure_storage: ^9.2.2
   rxdart: ^0.28.0
   intl: ^0.19.0
-  shared_preferences: ^2.2.3
+  shared_preferences: ^2.3.3
+  uuid: ^4.5.1
 
 ## for development only
 #dependencies:
