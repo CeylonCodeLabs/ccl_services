@@ -70,6 +70,7 @@ class EventRelayService {
       );
       if (!completer.isCompleted) {
         completer.completeError(error);
+        responseSubscription.cancel();
       }
       throw error;
     });
