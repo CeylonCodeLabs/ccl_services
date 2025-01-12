@@ -1,3 +1,2 @@
-- chore(Release): v0.7.1 (Pasan Eramusugoda)
-- fix(Event Relay): Cancel response subscription when timeout reached (Pasan Eramusugoda)
+- refactor(Package): Updates (Pasan Eramusugoda)
 - docs(Release): Updates (Pasan Eramusugoda)
