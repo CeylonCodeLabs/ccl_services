@@ -1,2 +1,3 @@
-- refactor(Package): Updates (Pasan Eramusugoda)
-- docs(Release): Updates (Pasan Eramusugoda)
+- chore(Release): v0.8.0 (Pasan Eramusugoda)
+- feat(Secure Storage): Retain specified keys on logout (Pasan Eramusugoda)
+- feat(SecureStorage): Add listen method to SecureStorageHelper (Pasan Eramusugoda)
