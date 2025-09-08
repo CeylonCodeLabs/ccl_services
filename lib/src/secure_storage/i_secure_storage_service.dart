@@ -10,7 +10,8 @@ abstract class ISecureStorageService implements InitializableDependency {
   Future<void> init();
 
   /// Logs the user out by clearing all data from secure storage except the device ID.
-  Future<void> logout();
+  /// List keys to retain in secure storage.
+  Future<void> logout([List<String>? keys]);
 
   /// Clears all data from secure storage.
   Future<void> clearAll();

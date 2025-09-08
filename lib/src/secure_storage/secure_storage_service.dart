@@ -33,12 +33,19 @@ class SecureStorageService extends SecureStorageInstance
     deviceId = SSObject('device_id', instance);
   }
 
-  /// Logs the user out by clearing all data from secure storage except the device ID.
+  /// Logs the user out by clearing all data from secure storage except the [keys] provided.
+  /// [keys] are the keys to retain in secure storage. If not provided, the device ID is retained.
   @override
-  Future<void> logout() async {
-    final deviceId = await this.deviceId.read();
-    await clearAll();
-    await this.deviceId.set(deviceId);
+  Future<void> logout([List<String>? keys]) async {
+    final keysToRetain = keys ?? [deviceId.key];
+
+    final allKeys = await instance.readAll();
+
+    for (final key in allKeys.keys) {
+      if (!keysToRetain.contains(key)) {
+        await instance.delete(key: key);
+      }
+    }
   }
 
   /// Clears all data from secure storage.
