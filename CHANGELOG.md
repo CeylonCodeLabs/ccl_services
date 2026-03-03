@@ -1,4 +1,20 @@
 
+<a name="v0.9.0"></a>
+## [v0.9.0](https://github.com/CeylonCodeLabs/ccl_packages/compare/v0.8.0...v0.9.0) (2026-03-03)
+
+### Build
+
+* **SecureStorage:** update dependencies and storage config
+
+### Chore
+
+* **Release:** v0.9.0
+
+### Docs
+
+* **Release:** Updates
+
+
 <a name="v0.8.0"></a>
 ## [v0.8.0](https://github.com/CeylonCodeLabs/ccl_packages/compare/v0.7.2...v0.8.0) (2025-09-08)
 

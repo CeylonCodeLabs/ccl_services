@@ -1,3 +1,3 @@
-- chore(Release): v0.8.0 (Pasan Eramusugoda)
-- feat(Secure Storage): Retain specified keys on logout (Pasan Eramusugoda)
-- feat(SecureStorage): Add listen method to SecureStorageHelper (Pasan Eramusugoda)
+- chore(Release): v0.9.0 (Pasan Eramusugoda)
+- build(SecureStorage): update dependencies and storage config (Pasan Eramusugoda)
+- docs(Release): Updates (Pasan Eramusugoda)
